@@ -11,12 +11,12 @@ const ShopContextProvider = (props) => {
 
   useEffect(() => {
     axios
-      .get(`https://mernback-5-r5jk.onrender.com//api/v1/allproducts/`)
+      .get(`https://mernback-5-r5jk.onrender.com/api/v1/allproducts/`)
       .then((res) => {
         setAllProducts(res.data.product);
         if (localStorage.getItem("auth-token")) {
           axios
-            .get("https://mernback-5-r5jk.onrender.com//api/v1/cart/getcartitem", {
+            .get("https://mernback-5-r5jk.onrender.com/api/v1/cart/getcartitem", {
               headers: {
                 Accept: "application/json",
                 "auth-token": localStorage.getItem("auth-token"),
@@ -44,7 +44,7 @@ const ShopContextProvider = (props) => {
     if (localStorage.getItem("auth-token")) {
       axios
         .post(
-          "https://mernback-5-r5jk.onrender.com//api/v1/cart/incrementcart",
+          "https://mernback-5-r5jk.onrender.com/api/v1/cart/incrementcart",
           {
             itemId: itemId,
           },
@@ -78,7 +78,7 @@ const ShopContextProvider = (props) => {
     if (localStorage.getItem("auth-token")) {
       axios
         .post(
-          "https://mernback-5-r5jk.onrender.com//api/v1/cart/decrementcart",
+          "https://mernback-5-r5jk.onrender.com/api/v1/cart/decrementcart",
           {
             itemId: itemId,
           },
@@ -104,7 +104,7 @@ const ShopContextProvider = (props) => {
     if (localStorage.getItem("auth-token")) {
       axios
         .post(
-          "https://mernback-5-r5jk.onrender.com//api/v1/cart/removecart",
+          "https://mernback-5-r5jk.onrender.com/api/v1/cart/removecart",
           {
             itemId: itemId,
           },

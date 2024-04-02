@@ -20,7 +20,7 @@ const SignUp = () => {
     event.preventDefault();
     try {
       axios
-        .post("https://mernback-5-r5jk.onrender.com//api/v1/auth/signup", formData)
+        .post("https://mernback-5-r5jk.onrender.com/api/v1/auth/signup", formData)
         .then((res) => {
           toast.success("Login Successfull!");
           setTimeout(() => {

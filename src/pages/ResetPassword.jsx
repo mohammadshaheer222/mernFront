@@ -21,7 +21,7 @@ const ResetPassword = () => {
     try {
       await axios
         .post(
-          `https://mernback-5-r5jk.onrender.com//api/v1/auth/resetPassword/${accessToken}`,
+          `https://mernback-5-r5jk.onrender.com/api/v1/auth/resetPassword/${accessToken}`,
           { password }
         )
         .then((res) => {

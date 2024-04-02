@@ -23,7 +23,7 @@ const Login = () => {
     event.preventDefault();
     try {
       await axios
-        .post("https://mernback-5-r5jk.onrender.com//api/v1/auth/login", formData)
+        .post("https://mernback-5-r5jk.onrender.com/api/v1/auth/login", formData)
         .then((res) => {
           if (res) {
             localStorage.setItem("auth-token", res.data.accessToken);

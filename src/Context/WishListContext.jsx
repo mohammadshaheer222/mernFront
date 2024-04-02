@@ -9,7 +9,7 @@ const WishListContextProvider = (props) => {
   useEffect(() => {
     if (localStorage.getItem("auth-token")) {
       axios
-        .get("https://mernback-5-r5jk.onrender.com//api/v1/wishlist/getwishlist", {
+        .get("https://mernback-5-r5jk.onrender.com/api/v1/wishlist/getwishlist", {
           headers: {
             Accept: "application/json",
             "auth-token": localStorage.getItem("auth-token"),
@@ -30,7 +30,7 @@ const WishListContextProvider = (props) => {
     if (localStorage.getItem("auth-token")) {
       axios
         .post(
-          "https://mernback-5-r5jk.onrender.com//api/v1/wishlist/addwhishlist",
+          "https://mernback-5-r5jk.onrender.com/api/v1/wishlist/addwhishlist",
           {
             itemId: itemId,
           },
@@ -56,7 +56,7 @@ const WishListContextProvider = (props) => {
     if (localStorage.getItem("auth-token")) {
       axios
         .post(
-          "https://mernback-5-r5jk.onrender.com//api/v1/wishlist/removewhishlist",
+          "https://mernback-5-r5jk.onrender.com/api/v1/wishlist/removewhishlist",
           {
             itemId: itemId,
           },
