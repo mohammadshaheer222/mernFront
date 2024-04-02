@@ -10,7 +10,7 @@ const RecentlyViewed = () => {
     console.log(recentlyViewed)
     axios
       .get(
-        `https://mernback-5-r5jk.onrender.com/api/v1/allproducts/recentlyViewed/${recentlyViewed}`
+        `https://backend-hqzy.onrender.com/api/v1/allproducts/recentlyViewed/${recentlyViewed}`
       )
       .then((res) => {
         setAllProducts([res.data.recentlyViewedProducts]);

@@ -85,7 +85,7 @@ const Popular = () => {
 
   useEffect(() => {
     axios
-      .get(`https://mernback-5-r5jk.onrender.com/api/v1/allproducts/popularProducts`)
+      .get(`https://backend-hqzy.onrender.com/api/v1/allproducts/popularProducts`)
       .then((res) => {
         setAllProducts(res.data.popularProducts);
       })

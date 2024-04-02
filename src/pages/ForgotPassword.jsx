@@ -18,7 +18,7 @@ const ForgotPassword = () => {
     console.log("hai", email);
     try {
       await axios
-        .post("https://mernback-5-r5jk.onrender.com/api/v1/auth/forgotPassword", {
+        .post("https://backend-hqzy.onrender.com/api/v1/auth/forgotPassword", {
           email: email,
         })
         .then((res) => {
